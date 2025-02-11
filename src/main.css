@@ -1,0 +1,114 @@
+.container {
+  display: grid;
+  grid-template-columns: 1fr 1.3fr 0.7fr;
+  grid-template-rows: 0.3fr 1.7fr 1fr 1fr;
+  gap: 0px 0px;
+  grid-auto-flow: row;
+  grid-template-areas:
+    "Header Header Header"
+    "main main aside"
+    "main main aside"
+    "main main aside";
+  height: 100vh;
+}
+
+.Header {
+  display: grid;
+  grid-template-columns: 0.7fr 2.2fr 1fr;
+  grid-template-rows: 1fr;
+  gap: 0px 0px;
+  grid-template-areas: "Header__Left Header__Middle Header__Right";
+  grid-area: Header;
+  margin-left: 20px;
+  margin-right: 20px;
+  border-bottom: 1px solid #e0e0e0;
+}
+
+.Header__Left {
+  grid-area: Header__Left;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.Header__Left form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 40px;
+  margin-left: 20px;
+  background-color: #f9f9f9;
+  border-radius: 50px;
+}
+
+.Header__Left form svg {
+  width: 24px;
+  height: 24px;
+  margin-left: 12px;
+  margin-right: 12px;
+}
+
+.Header__Left input {
+  height: 40px;
+  border: none;
+  background-color: transparent;
+}
+
+.Header__Left input:focus {
+  outline: none;
+}
+
+.Header__Middle {
+  grid-area: Header__Middle;
+}
+.Header__Right {
+  grid-area: Header__Right;
+  display: flex;
+  align-items: center;
+}
+
+.Header__Right ul {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  /* gap: 32px; */
+  width: 100%;
+}
+
+.Header__Right ul li {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+}
+
+.Header__Right ul li a {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.Header__Right__Profile button {
+  border: none;
+  background-color: transparent;
+}
+
+.Header__Right__Profile img {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+}
+
+.Header__Right a {
+  text-decoration: none;
+}
+
+.main {
+  grid-area: main;
+  display: flex;
+}
+
+.aside {
+  grid-area: aside;
+}
